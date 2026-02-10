@@ -1,4 +1,4 @@
-LLM biases for desirable objectives in the political domain
+# LLM biases for desirable objectives in the political domain
 
 ## Project Overview
 
@@ -13,29 +13,6 @@ This project examines how LLMs associate European Parliament politicians with de
 - **3 models analyzed**: Qwen 2.5-7B (China/Alibaba), Mistral 7B (France/Mistral AI), Gemma 2 9B (US/Google)
 - **~1000 rows per model** (50 politicians x 5 objectives x 4 prompts)
 
-## Project Structure
-
-```
-fairnessinai/
-├── data/
-│   ├── input/          # politicians.csv, objectives.csv, prompts.csv, test_politicians.csv
-│   └── output/         # Model analysis CSVs (qwen, mistral, gemma, llama)
-├── notebooks/          # Main_pipeline.ipynb, main_gpu.ipynb, llama_analysis.ipynb
-├── scripts/            # Python visualization and analysis scripts
-├── figures/            # All generated PNGs
-├── findings/           # Markdown write-ups of research findings
-└── CLAUDE.md
-```
-
-## Scripts
-
-- `scripts/compare_models_heatmap.py` — 7 heatmaps comparing Qwen, Mistral, Gemma
-- `scripts/visualize_cross_model_associations.py` — 5 figures for cross-model consistent disproportionate associations
-- `scripts/visualize_direct_vs_indirect.py` — 5 figures comparing direct vs indirect prompt bias
-- `scripts/visualize_competence_stereotype.py` — 6 figures for Left-Right competence stereotype analysis
-- `scripts/main.py` — CLI inference pipeline (argparse, no hardcoded paths)
-
-All scripts use `BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))` for relative paths.
 
 ## Sentiment Analysis
 
